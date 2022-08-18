@@ -1,0 +1,388 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html xmlns="http://www.w3.org/1999/xthml">
+
+<head>
+
+<title>Casa dos Licores</title>
+
+<meta http-equiv="Content-type" content="text/html charset=UTF-8" />
+<meta name="kwrd" content="store, Pc's, computer, sell, buy, cheap" />
+<meta name="desc" content="Online store for selling computers" />
+<meta name="author" content="Tatiane Schroeder" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+
+</head>
+
+
+<div id="INTRO">
+
+<h1> Bem vindo! </h1>
+
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+
+         html {
+
+        border-top: 5px solid #fff;
+
+        background: #FF8C00;
+
+    }
+
+    #slider {
+
+        position: relative;
+
+        overflow: hidden;
+
+        margin: 20px auto 0 auto;
+
+        border-radius: 4px;
+
+    }
+
+    #slider ul {
+
+        position: relative;
+
+        margin: 0;
+
+        padding: 0;
+
+        height: 200px;
+
+        list-style: none;
+
+    }
+
+    #slider ul li {
+
+        position: relative;
+
+        display: block;
+
+        float: left;
+
+        margin: auto;
+
+        padding: auto;
+
+        width: 1000px;
+
+        height: 500px;
+
+        background: #FF8C00;
+
+        text-align: center;
+
+        line-height: 300px;
+
+    }
+
+    a.control_prev, a.control_next {
+
+        position: absolute;
+
+        top: 40%;
+
+        z-index: 999;
+
+        display: block;
+
+        padding: 4% 3%;
+
+        width: auto;
+
+        height: auto;
+
+        background: #2a2a2a;
+
+        color: #fff;
+
+        text-decoration: none;
+
+        font-weight: 600;
+
+        font-size: 18px;
+
+        opacity: 0.8;
+
+        cursor: pointer;
+
+    }
+
+    a.control_prev:hover, a.control_next:hover {
+
+        opacity: 1;
+
+        -webkit-transition: all 0.2s ease;
+
+    }
+
+    a.control_prev {
+
+        border-radius: 0 2px 2px 0;
+
+    }
+
+    a.control_next {
+
+        right: 0;
+
+        border-radius: 2px 0 0 2px;
+
+    }
+
+    .slider_option {
+
+        position: relative;
+
+        margin: 10px auto;
+
+        width: 160px;
+
+        font-size: 18px;
+
+    }
+
+    </style>
+
+    
+
+  </head>
+
+<body>
+
+<div id="slider">
+
+    <a href="#" class="control_next">Next</a>
+
+    <a href="#" class="control_prev">Back</a>
+
+    <ul>
+
+        <li>
+
+                <img src="logo.img"/>
+
+            </a>
+
+        </li>
+
+        <li>
+
+                <img src="morango.img"/>
+
+            </a>
+
+        </li>
+<li>
+
+                <img src="limoncello.img"/>
+
+            </a>
+
+        </li>
+
+        <li>
+
+                <img src="nutella.img"/>
+
+            </a>
+
+        </li>
+	</ul>
+</div>
+
+<script>
+
+    $(function() {
+
+    $('#checkbox').change(function () {
+
+        setInterval(function () {
+
+            moveRight();
+
+        }, 4000);
+
+    });
+
+    var slideCount = $('#slider ul li').length;
+
+    var slideWidth = $('#slider ul li').width();
+
+    var slideHeight = $('#slider ul li').height();
+
+    var sliderUlWidth = slideCount * slideWidth;
+		
+	
+
+    $('#slider').css({
+
+        width: slideWidth,
+
+        height: slideHeight
+
+    });
+
+    $('#slider ul').css({
+
+        width: sliderUlWidth,
+
+        marginLeft: -slideWidth
+
+    });
+
+    $('#slider ul li:last-child').prependTo('#slider ul');
+
+    function moveLeft() {
+
+        $('#slider ul').animate({
+
+            left: +slideWidth
+
+        }, 4000, function () {
+
+            $('#slider ul li:last-child').prependTo('#slider ul');
+
+            $('#slider ul').css('left', '');
+
+        });
+
+    };
+
+    function moveRight() {
+
+        $('#slider ul').animate({
+
+            left: -slideWidth
+
+        }, 200, function () {
+
+            $('#slider ul li:first-child').appendTo('#slider ul');
+
+            $('#slider ul').css('left', '');
+
+        });
+
+    };
+
+    $('a.control_prev').click(function () {
+
+        moveLeft();
+
+    });
+
+    $('a.control_next').click(function () {
+
+        moveRight();
+
+    });
+
+});
+
+//função trocar imagem a cada 4 sec.
+
+
+
+</script>
+
+</body>
+   	
+	
+<div id="nav">
+
+	<ul>
+		<li><a href="index.html">Homepage</a></li>
+		<li><a href="Sobre.html">Sobre<a/></li>
+		<li><a href="Catalogo.html">Catalogo</a></li>
+		<li><a href="Contato.html">Contato</a></li>
+	</ul>
+</div>
+
+<select id="link">
+   <option value="" selected>Escolha o site</option>
+   <option value="http://www.google.com">Google</option>
+   <option value="http://www.youtube.com">YouTube</option>
+   <option value="http://pt.stackoverflow.com/">Stack</option>
+</select>
+
+<script>
+ $(document).ready(function(){
+
+    $('#link').on('change', function () {
+         var url = $(this).val(); 
+         if (url) { 
+             window.open(url, '_blank');
+          }
+          return false;
+        });
+     });
+</script>
+
+<div id="OVERVIEW">
+<table border="0px">
+
+<input type="text" name="Busca" value="Encontre aqui" /><br />
+<input type="button" name="Enviar" value="Enviar" />
+
+	<tr>
+		<td><select>
+		<option value="catalogo.html">Licores com leite</option>
+		<option value="Com leite">Amarula</option>
+		<option value="Com leite">Cappuccino</option>
+		<option value="Com leite">Creme de Limoncello</option>
+		<option value="Com leite">Creme de Nutella</option>
+		<option value="Com leite">Creme de Danoninho</option>
+		</select></td>
+	</tr>
+
+	<tr>
+		<td><select>
+		<option value="Sem leite">Licores sem leite</option>
+		<option value="Sem leite">Limoncello</option>
+		<option value="Sem leite">Morando</option>
+		<option value="Sem leite">Café</option>
+		<option value="Sem leite">Anis</option>
+		</select></td>
+	</tr>
+</table>
+
+<a href="Sobre.html#alcoólica" target="_blank">História Geral</a><br />
+<a href="Sobre.html#bruxarias"target="_blank">Lendas e bruxarias</a><br />
+<a href="Sobre.html#história" target="_blank">A história do Licor</a>
+
+</div>
+
+<div id="MOTIVATION">
+
+<img src="licorgrande.img" width="400px" height="400" /><img src="licorfruta.img" width="400px" height="400" /><br />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sVUof0F1Xeg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+</div>
+
+
+
+<body>
+
+<div id="Footer">
+
+<img src="logo.img" width="100px" height="100" /><br />
+
+<a class="twitter-follow-button"
+  href="https://twitter.com/TwitterDev">
+Follow @TwitterDev</a>
+
+</div>
+
+
+</body>
+
+</html>
+

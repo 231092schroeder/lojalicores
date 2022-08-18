@@ -1,0 +1,113 @@
+#INTRO{
+	color: white;
+	text-align: center;
+	position: center;
+	background-image: center;
+	background-position: center;
+	background-color: #FF8C00;
+	
+}
+
+
+
+#OVERVIEW{
+color: white;
+border: 1 px solid black;
+height: auto;
+width: auto;
+background-color: #FF8C00;
+margin: 0px auto;
+text-align: left;
+position: left;
+}
+
+#MOTIVATION{
+color: white;
+border: 1 px solid black;
+height: auto;
+width: auto;
+background-color: #FF8C00;
+margin: 0px auto;
+text-align: center;
+position: center;
+line-height: absolute;
+}
+
+
+#nav{
+color: white;
+border: 1 px solid black;
+height: auto;
+width: auto;
+background-color: #FF8C00;
+margin: auto;
+text-align: center;
+position: left;
+}
+
+#nav ul{
+list-style-type: none;
+}
+
+
+#nav ul li{
+width: 200px;
+display: inline;
+padding: 20px;
+}
+
+#nav ul li a:link{
+text-decoration: none;
+}
+
+#nav ul li a:visited{
+text-decoration: none;
+color: white;
+}
+
+#nav ul li a:hover{
+text-decoration: none;
+font-weight: bold;
+}
+
+#nav ul li a:active{
+text-decoration: none;
+color:white;
+}
+
+
+#Mapa {
+border: 1px solid black;
+height: 600px;
+width: 700px;
+position: relative;
+margin: 0px auto;
+}
+
+#sobre {
+color: white;
+font-family: Arial;
+font-size: 20px;
+display: inline;
+background-color: #FF8C00;
+list-style-type: none;
+margin-bottom: 0px;
+height: auto;
+width: 100px;
+}
+
+
+
+
+#Footer{
+border: 1px solid black;
+height: auto 	;
+width: auto;
+margin: 0px auto;
+color: white;
+text-align: center;
+position: center;
+background-image: center;
+background-position: center;
+background-color: #FF8C00;
+}
